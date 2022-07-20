@@ -1,0 +1,376 @@
+.Navbar{
+  z-index: 1;
+  direction: rtl;
+  float: rtl
+  
+}
+.carousel{
+  direction: ltr;
+}
+
+
+.a{
+  margin-left: 20%;
+}
+
+html {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+html body {
+  height: 100%;
+}
+html body #intro {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+html body #intro * {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+html body #modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+  overflow: hidden;
+}
+html body #modal:hover:before {
+  transform: scale(1.5);
+}
+html body #modal:before {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  content: " ";
+  background-image: url("http://ak.picdn.net/shutterstock/videos/3435617/preview/stock-footage-modern-city-a-busy-overpass-at-sunset.jpg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+  transition: transform 60s linear;
+  transform: scale(1);
+  transform-origin: left top;
+}
+html body #modal:focus, html body #modal:target {
+  transform: scale(1);
+}
+html body #modal > a {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  cursor: default;
+}
+html body #modal section {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 25px;
+  box-sizing: border-box;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+}
+form div {
+  position: relative;
+  min-height: 50px;
+  margin-top: 25px;
+}
+form div:first-of-type {
+  margin-top: 0;
+}
+form div span {
+  position: absolute;
+  z-index: 5;
+  display: block;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  background-color: #ff9900;
+  font-size: 20px;
+}
+form div input[type="email"], form div input[type="password"] {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  padding-left: 65px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-sizing: border-box;
+  border-color: #ddd;
+  border-width: 1px;
+  border-style: solid;
+  transition: background-color 0.25s;
+}
+form div input[type="email"]:hover, form div input[type="password"]:hover, form div input[type="email"]:focus, form div input[type="password"]:focus {
+  outline: none;
+  background-color: #ddd;
+}
+form div.controls a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #aaa;
+}
+form div.controls a:hover, form div.controls a:focus {
+  color: #777;
+}
+form div.controls a:active {
+  color: #666;
+}
+form div button {
+  margin-left: 50px;
+}
+.button {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  text-decoration: none;
+}
+.button:hover, .button:focus {
+  outline: none;
+  background-color: #e5892e;
+}
+.button:active {
+  background-color: #cc7a29;
+}
+
+.section_our_solution .row {
+  align-items: center;
+}
+
+.our_solution_category {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.our_solution_category .solution_cards_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.solution_cards_box .solution_card {
+  flex: 0 50%;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
+    0 5px 15px 0 rgba(37, 44, 97, 0.15);
+  border-radius: 15px;
+  margin: 8px;
+  padding: 10px 15px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  min-height: 265px;
+  transition: 0.7s;
+}
+
+.solution_cards_box .solution_card:hover {
+  background: #efe305;
+  color: #fff;
+  transform: scale(1.1);
+  z-index: 9;
+}
+
+.solution_cards_box .solution_card:hover::before {
+  background: rgb(85 108 214 / 10%);
+}
+
+.solution_cards_box .solution_card:hover .solu_title h3,
+.solution_cards_box .solution_card:hover .solu_description p {
+  color: #fff;
+}
+
+.solution_cards_box .solution_card:before {
+  content: "";
+  position: absolute;
+  background: rgb(85 108 214 / 5%);
+  width: 170px;
+  height: 400px;
+  z-index: -1;
+  transform: rotate(42deg);
+  right: -56px;
+  top: -23px;
+  border-radius: 35px;
+}
+
+.solution_cards_box .solution_card:hover .solu_description button {
+  background: #fff !important;
+  color: #309df0;
+}
+
+.solution_card .so_top_icon {
+}
+
+.solution_card .solu_title h3 {
+  color: #212121;
+  font-size: 1.3rem;
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+.solution_card .solu_description p {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.solution_card .solu_description button {
+  border: 0;
+  border-radius: 15px;
+  background: linear-gradient(
+    140deg,
+    #42c3ca 0%,
+    #42c3ca 50%,
+    #42c3cac7 75%
+  ) !important;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 5px 16px;
+}
+
+.our_solution_content h1 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+.our_solution_content p {
+}
+
+.hover_color_bubble {
+  position: absolute;
+  background: rgb(54 81 207 / 15%);
+  width: 100rem;
+  height: 100rem;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  top: 16rem;
+  border-radius: 50%;
+  transform: rotate(-36deg);
+  left: -18rem;
+  transition: 0.7s;
+}
+
+.solution_cards_box .solution_card:hover .hover_color_bubble {
+  top: 0rem;
+}
+
+.solution_cards_box .solution_card .so_top_icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.solution_cards_box .solution_card .so_top_icon img {
+  width: 40px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/*start media query*/
+@media screen and (min-width: 320px) {
+  .sol_card_top_3 {
+    position: relative;
+    top: 0;
+  }
+
+  .our_solution_category {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .our_solution_category .solution_cards_box {
+    flex: auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .our_solution_category .solution_cards_box {
+    flex: 1;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .sol_card_top_3 {
+    position: relative;
+    top: -3rem;
+  }
+  .our_solution_category {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+body{
+  background-color: black !important;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+a{
+  color: white !important;
+  text-decoration: none;
+}
