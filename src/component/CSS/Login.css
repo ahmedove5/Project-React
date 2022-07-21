@@ -23,15 +23,7 @@ p{
 .fab:hover{
 	cursor: pointer;
 }
-.fa-twitter{
-	color: #56ABEC;
-}
-.fa-facebook{
-	color: #1775F1;
-}
-.fa-google{
-	color: #CB5048;
-}
+
 .division{
 	float: none;
 	position: relative;

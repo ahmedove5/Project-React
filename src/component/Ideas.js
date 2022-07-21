@@ -4,11 +4,34 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { Card, Col, Container,Row } from 'react-bootstrap'
 import "./CSS/Idea.css"
-
+import { Button } from 'react-bootstrap'
+let arr=[]
+let showlist ;
 export default function Ideas() {
     const [data ,setData]=useState([])
-    const [comments , setComments]=useState([])
-    const [comment , setComment]=useState('')
+      const [name1 , setName]=useState([{
+        comment1:""}
+      ]) 
+    
+    showlist= name1.map((c,index)=>{
+      if (c.comment1 === ""){
+        return(
+          <div>
+
+          </div>
+
+
+        )
+      }
+      else {
+        return(
+          <h3>{c.comment1}</h3>
+        )
+      }
+    })
+    // const [comments , setComments]=useState([])
+    // const [comment , setComment]=useState('')
+    // const [id, setId] = useState([]);
     
     useEffect(()=>{
         axios.get(`https://62d3e350cd960e45d44f7d3a.mockapi.io/api`)
@@ -42,71 +65,82 @@ export default function Ideas() {
 
     })
 
+
   }
-  const setIdd =()=>{
-    setComments([...comments , comment])
-    setComment("")
-  }
+//   const setIdd =()=>{
+//     setComments([...comments , comment])
+//     setComment("")
+//   }
+const postData = (e ) => {
+
+  e.preventDefault();
+  arr=[...name1, {
+    comment1:e.target.parentElement.children[0].value
+
+  }]
+  setName(arr)
+
+    // axios
+    //   .post(`https://62d3e350cd960e45d44f7d3a.mockapi.io/addComment${id}`, {
+    //     comment,
+    //     comments
+        
+
+    //   })
+    //   .then((res) => {
+    //     console.log(res);
+    //     // navigate("/Home");
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+
+  };
   return (
     <div>
-        {/* <ul>
-            {data.map(e=>(
-                <>
-                <li>{e.idea} </li>
-                <li> {e.dscreption}</li>
-                <li className='c-l'> {e.cost}</li>
-                <Link to="/Uodate">
-                <button onClick={setUpdate(e)}>update</button>
-                </Link>
-                <button onClick={()=>{onDelete(e.id)}}>Delete</button>
-                
-
-                
-                </>
-
-            ))}
-        </ul> */}
-        <article class="wrapper">
-
-        </article>
+   
+       
         <Container>
             <Row md={"3"}>
         {data.map(e=>(
                 <Col  >
                
-            
+               {e.idea} 
+               {e.dscreption}
+               
         <Card className='cards mb-4' style={{ width: '18rem' ,float:'left'}}>
       <Card.Body>
         <Card.Title className='text-'>{e.idea}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">{e.dscreption}</Card.Subtitle>
         <Card.Text>
-        {e.cost}
+       {e.cost} SR
         </Card.Text>
        
-        <button onClick={setUpdate(e)}>update</button>
-        <button onClick={()=>{onDelete(e.id)}}>Delete</button>
-        <input onChange={(e)=>{
-            setComment(e.target.value)
-        }} placeholder='التكلفة' value={comment} ></input>
+ 
+        <Button variant="dark"  onClick={()=>{onDelete(e.id)}}>امسح فكرتك</Button>{' '}
+        
+      </Card.Body>
+    <form>
+        <input value={name1.comment1} placeholder='التكلفة'  ></input>
         <br/>
 
         <ul>
-            {comments.map((c)=>(
-                <li>{c}</li>
-            ))}
+            {/* {comments.map((c)=>(
+                <li key={c.if}>{c.comment}</li>
+            ))} */}
+            
         </ul>
       
-        <button onClick={setIdd}>اضف</button>
-      </Card.Body>
+        <button  onClick={postData}>اضف</button>
+        </form>
+        {showlist}
     </Card>
-     
-    
 
     </Col>
       ))}
     </Row>
     </Container>
-        
+       
     </div>
   )
-}
+          }

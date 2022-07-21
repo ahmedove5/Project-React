@@ -6,6 +6,7 @@ import Home from './component/Home';
 import Login from './component/Login';
 import AddIdaea from './component/AddIdaea';
 import Ideas from './component/Ideas';
+import Rate from './component/Fire';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
 
           </Route>
         </Routes>
+        
         <Footer/>
       </Router>
      

@@ -3,6 +3,7 @@ import axios from 'axios'
 import {useNavigate } from "react-router-dom"
 import { Button } from 'react-bootstrap'
 // import "./CSS/AddIdea.css"
+import Rate from "./Fire"
 
 export default function () {
     const navigate=useNavigate()
@@ -30,6 +31,24 @@ export default function () {
         <input placeholder='التكلفة' onChange={(e)=>{setCost(e.target.value)}}></input>
         <br/>
         <Button variant="warning" onClick={postdata}>اضف فكرتك</Button>{' '}
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        
+
+        <Rate/>
 
        </div>
    

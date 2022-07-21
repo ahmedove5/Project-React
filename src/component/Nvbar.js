@@ -13,9 +13,10 @@ export default function Nvbar() {
     <Container>
       <Navbar.Brand href="#home" dir='rtl'>أبدع بفكرتك</Navbar.Brand>
       <Nav >
-        <Nav.Link  dir='rtl'><Link to={"/"}>الرئيسية</Link></Nav.Link>
-        <Nav.Link href="#Ideas"><Link to={"/AddIdaea"}>اضف فكرتك</Link></Nav.Link>
-        <Nav.Link href="#pricing"><Link to={"/Ideas"}>الأفكار</Link></Nav.Link>
+        <Nav.Link  ><Link to={"/"}>الرئيسية</Link></Nav.Link>
+        <Nav.Link ><Link to={"/AddIdaea"}>اضف فكرتك</Link></Nav.Link>
+        <Nav.Link ><Link to={"/Ideas"}>الأفكار</Link></Nav.Link>
+        <Nav.Link ><Link to={"/Login"}>تسجيل الدخول</Link></Nav.Link>
       </Nav>
     </Container>
   </Navbar></div></div>

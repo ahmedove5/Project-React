@@ -96,7 +96,7 @@ export default function Coursel() {
             </div>
             <div class="solu_description">
               <p>
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+              “موقع الويب هو من سيقوم بالتسويق لخدماتك كامل اليوم على مدار الأسبوع وليس موظفوك!”
               </p>
              
             </div>
@@ -149,11 +149,12 @@ export default function Coursel() {
               </svg>
             </div>
             <div class="solu_title">
-              <h3>أبتكر فكرتك وكون مشروعك عن طريقنا</h3>
+              <h3>لماذا نحن متميزون؟</h3>
             </div>
             <div class="solu_description">
               <p>
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+              عملنا الجاد في مجال التطوير التقني والتسويق الإلكتروني والتواصل مع آلاف العملاء
+تجعل من شركتنا خياركم الأفضل لتحقيق أهدافكم. تواصلوا معنا وترقبوا النتائج
               </p>
             
             </div>
@@ -212,7 +213,9 @@ export default function Coursel() {
             </div>
             <div class="solu_description">
               <p>
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+              يعتبر الإبداع أحد الحالات العقلية البشرية التي تسعى إلى إيجاد أفكار ووسائل مختلفة لحلّ المشاكل، ويشكّل الإبداع إضافة حقيقية لمجموع الإنتاج الإنسانيّ، كما أنّه يحقق فائدة حقيقية على أرض الواقع، لا سيما إذا ارتبط بالمواضيع التطبيقية
+
+
               </p>
               
             </div>
@@ -269,7 +272,8 @@ export default function Coursel() {
             </div>
             <div class="solu_description">
               <p>
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+              للعبقرية صلة بالجنون
+بالمعنى المجازيّ يقصد به التفوق العقلي، والنبوغ الظاهر والنباهة الجلية
               </p>
               
             </div>
