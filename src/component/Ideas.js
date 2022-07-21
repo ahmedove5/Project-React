@@ -98,6 +98,9 @@ const postData = (e ) => {
   };
   return (
     <div>
+      <article class="wrapper">
+
+</article>
    
        
         <Container>
